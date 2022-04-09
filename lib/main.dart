@@ -1,7 +1,10 @@
 import 'package:flutter/material.dart';
+import 'package:pet_components/Home/see_category.dart';
+import 'package:pet_components/OtherPage/settings_page.dart';
 
 import 'Home/home_page.dart';
 import 'HomePreference/home_preference.dart';
+import 'OtherPage/details_page.dart';
 
 void main() {
   runApp(const MyApp());
@@ -19,7 +22,16 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         primarySwatch: Colors.blue,
       ),
-      home: HomePreference(),
+      initialRoute: '/preference',
+      routes: {
+        '/preference': (context) => HomePreference(),
+        '/home': (context) => HomePage(),
+        '/seeCategory': (context) => SeeCategory(),
+        '/settingsPage': (context) => SettingsPage(),
+        '/details': (context) => DetailsScreen(),
+        '/blog': (context) => HomePage(),
+        '/blogDetails': (context) => HomePage(),
+      },
     );
   }
 }

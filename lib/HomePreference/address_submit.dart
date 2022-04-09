@@ -27,7 +27,7 @@ class _AddressSubmitState extends State<AddressSubmit> {
           ),
           const SizedBox(height: 8),
           MaterialTextField(
-            lable:"Your address",hintText:"Enter your ID",readOnly: false,controller:emilController ,
+            lable:"",readOnly: false,controller:emilController ,
           ),
           const SizedBox(height: 38),
         ],

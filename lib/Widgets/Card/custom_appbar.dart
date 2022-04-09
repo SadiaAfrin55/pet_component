@@ -9,7 +9,7 @@ class CustomAppbar extends StatelessWidget {
   Widget build(BuildContext context) {
     return Container(
       width: MediaQuery.of(context).size.width,
-      height: 51,
+      height: 71,
       decoration: BoxDecoration(
         color: Color(0xFFFFDD99).withOpacity(0.6),
       ),

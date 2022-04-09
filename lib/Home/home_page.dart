@@ -2,6 +2,7 @@
 import 'package:flutter/material.dart';
 import 'package:pet_components/Home/HomeComponents/search_compo.dart';
 
+import '../Widgets/Card/Home/rescue_card.dart';
 import '../Widgets/Card/custom_appbar.dart';
 import '../Widgets/TextField/search_field.dart';
 import 'HomeComponents/category_sec.dart';
@@ -23,6 +24,12 @@ class HomePage extends StatelessWidget {
                  SearchCompo(),
                  CategorySection(),
                  PetCompo(),
+                 RescueCard(),
+                 
+                 IconButton(onPressed: (){
+                   Navigator.pushNamed(context, '/settingsPage');
+                 },
+                     icon: Icon(Icons.settings))
                ],
              ),
            ),

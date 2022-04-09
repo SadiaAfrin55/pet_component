@@ -9,20 +9,19 @@ class SearchCompo extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      margin: EdgeInsets.symmetric(vertical: 12,horizontal: 8),
+      margin: EdgeInsets.symmetric(horizontal: 8),
       child: Row(
         mainAxisAlignment: MainAxisAlignment.center,
         children: [
-          Expanded(
-            flex: 6,
-              child: Container(
-                  height: 37,
-                  child: SearchTextField(readOnly: false,))),
           Container(
-            color: Colors.lime,
-            width: 34,
-            height: 34,
-              child: SvgPicture.asset('assets/icons/search.svg')),
+              width: MediaQuery.of(context).size.width*0.82,
+              height: 37,
+              child: SearchTextField(readOnly: false,)),
+          Container(
+            //width: 34,
+              width: MediaQuery.of(context).size.width*0.12,
+              padding: EdgeInsets.only(top: 10),
+              child: Image.asset('assets/icons/search.png',)),
         ],
       ),
     );

@@ -14,10 +14,10 @@ class _PetSuggestionCardState extends State<PetSuggestionCard> {
     return Scaffold(
       body: Center(
         child: Container(
-          width: MediaQuery.of(context).size.width/2,
+          width: MediaQuery.of(context).size.width*0.40,
           height: 106,
           decoration: BoxDecoration(
-            color: Color(0xffA2FECF),
+            color: Color(0xffE5E5E5),
             borderRadius: BorderRadius.circular(7),
           ),
           child: Padding(
@@ -28,11 +28,14 @@ class _PetSuggestionCardState extends State<PetSuggestionCard> {
                 Row(
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: [
-                    const Text(
-                      "Kitty Sadia",
-                      style: TextStyle(
-                        fontSize: 8,
-                        fontWeight: FontWeight.w700,
+                    Padding(
+                      padding: const EdgeInsets.only(left: 13.0,top: 8),
+                      child: const Text(
+                        "Kitty Sadia",
+                        style: TextStyle(
+                          fontSize: 8,
+                          fontWeight: FontWeight.w700,
+                        ),
                       ),
                     ),
                     InkWell(
@@ -42,6 +45,7 @@ class _PetSuggestionCardState extends State<PetSuggestionCard> {
                       child: Container(
                         height: 10,
                         width: 10,
+                        margin: EdgeInsets.only(right: 2),
                         decoration: BoxDecoration(
                           color: Color(0xffFFDD99),
                           borderRadius: BorderRadius.circular(2),
@@ -64,92 +68,113 @@ class _PetSuggestionCardState extends State<PetSuggestionCard> {
                 Row(
                   children: [
                     Container(
-                      height: 60,
-                      width: 65,
-                      color: Color.fromARGB(255, 226, 113, 20),
-                    ),
-                    Column(
-                      crossAxisAlignment: CrossAxisAlignment.start,
-                      children: [
-                        Row(
-                          children: [
-                            Container(
-                              width: 6,
-                              height: 6,
-                              color: Color.fromARGB(255, 226, 113, 20),
-                            ),
-                            SizedBox(
-                              width: 5,
-                            ),
-                            Text(
-                              "Dhaka, Dhanmondi",
-                              style: TextStyle(
-                                fontSize: 8,
+                        padding: const EdgeInsets.only(left:29.0,top: 12),
+                        color: Color(0),
+                        child: Image.asset('assets/icons/cat.png',height: 42,)),
+                    Padding(
+                      padding: const EdgeInsets.only(left: 24.0),
+                      child: Column(
+                        crossAxisAlignment: CrossAxisAlignment.start,
+                        children: [
+                          Row(
+                            children: [
+                              Image.asset('assets/icons/location.png',color: Colors.black,),
+                              SizedBox(
+                                width: 2,
                               ),
-                            ),
-                          ],
-                        ),
-                        SizedBox(
-                          height: 5,
-                        ),
-                        Text(
-                          "Orgin: Asian",
-                          style: TextStyle(
-                            fontSize: 8,
-                          ),
-                        ),
-                        SizedBox(
-                          height: 5,
-                        ),
-                        Row(
-                          children: [
-                            Text(
-                              "Male",
-                              style: TextStyle(
-                                fontSize: 8,
-                              ),
-                            ),
-                            SizedBox(
-                              width: 5,
-                            ),
-                            SvgPicture.asset(
-                              "assets/icon/line.svg",
-                            ),
-                            SizedBox(
-                              width: 5,
-                            ),
-                            Text(
-                              "Age: 5",
-                              style: TextStyle(
-                                fontSize: 8,
-                              ),
-                            ),
-                          ],
-                        ),
-                        SizedBox(
-                          height: 5,
-                        ),
-                        InkWell(
-                          onTap: () {},
-                          child: Container(
-                            width: 50,
-                            height: 20,
-                            decoration: BoxDecoration(
-                              color: Color(0xffFFDD99),
-                              borderRadius: BorderRadius.circular(3),
-                            ),
-                            child: Center(
-                              child: Text(
-                                "Adopt Box",
+                              Text(
+                                "Dhaka, Dhanmondi",
                                 style: TextStyle(
-                                  fontSize: 8,
-                                  color: Colors.black,
+                                  fontSize: 6,
+                                  fontWeight: FontWeight.w400,
+                                ),
+                              ),
+                            ],
+                          ),
+                          SizedBox(
+                            height: 5,
+                          ),
+                          RichText(
+                            text: const TextSpan(
+                              children: <TextSpan>[
+                                TextSpan(text: 'Origin: ', style: TextStyle(fontWeight: FontWeight.w700,fontSize: 6,color: Colors.black)),
+                                TextSpan(text: 'Deshi bride',style: TextStyle(fontSize: 6,fontWeight: FontWeight.w300,color: Colors.black)),
+                              ],
+                            ),
+                          ),
+                          SizedBox(
+                            height: 5,
+                          ),
+                          Row(
+                            children: [
+                              Container(
+                                width: 16,
+                                height: 8,
+                                decoration: BoxDecoration(
+                                  borderRadius: BorderRadius.circular(13),
+                                  color: Color(0xFF3969F6).withOpacity(0.2),
+                                ),
+                                child: const Center(
+                                  child: Text(
+                                    "Male",
+                                    style: TextStyle(
+                                      fontSize: 3,
+                                      fontWeight: FontWeight.w400,
+                                      color: Color(0xFF3969F6),
+                                    ),
+                                  ),
+                                ),
+                              ),
+                              Padding(
+                                padding: const EdgeInsets.symmetric(horizontal: 3.0),
+                                child: Divider(thickness: 5,height: 10,color:Colors.red),
+                              ),
+                              const Text(
+                                "Age:",
+                                style: TextStyle(
+                                  fontSize: 6,
+                                  fontWeight: FontWeight.w700,
+                                ),
+                              ),
+                              Container(
+                                width: 16,
+                                height: 8,
+                                decoration: BoxDecoration(
+                                  borderRadius: BorderRadius.circular(13),
+                                  color: Color(0xFFF8C055).withOpacity(0.2),
+                                ),
+                                child: Center(
+                                  child: Text('8 month',style: TextStyle(fontSize: 3,fontWeight: FontWeight.w300),),
+                                ),
+                              ),
+                            ],
+                          ),
+                          SizedBox(
+                            height: 5,
+                          ),
+                          InkWell(
+                            onTap: () {},
+                            child: Container(
+                              width: 29,
+                              height: 10,
+                              decoration: BoxDecoration(
+                                color: Color(0xffFFDD99),
+                                borderRadius: BorderRadius.circular(2),
+                              ),
+                              child: Center(
+                                child: Text(
+                                  "Adopt",
+                                  style: TextStyle(
+                                    fontSize: 6,
+                                    fontWeight: FontWeight.w700,
+                                    color: Colors.black,
+                                  ),
                                 ),
                               ),
                             ),
                           ),
-                        ),
-                      ],
+                        ],
+                      ),
                     ),
                   ],
                 ),

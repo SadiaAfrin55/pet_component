@@ -3,9 +3,8 @@ import 'package:flutter/material.dart';
 
 class MaterialTextField extends StatelessWidget {
   final String lable;
-  final String hintText;
   final bool readOnly;
-  MaterialTextField({required this.lable,required this.controller, required this.hintText,required this.readOnly});
+  MaterialTextField({required this.lable,required this.controller,required this.readOnly});
   TextEditingController controller = TextEditingController();
   @override
   Widget build(BuildContext context) {
@@ -21,8 +20,8 @@ class MaterialTextField extends StatelessWidget {
         readOnly: readOnly,
         controller: controller,
         decoration: InputDecoration(
-          hintText: hintText,
           labelText: lable,
+          labelStyle: TextStyle(color:Colors.black54),
           filled: true,
           fillColor: const Color(0xFFFFDD99).withOpacity(0.4),
           contentPadding: const EdgeInsets.symmetric(vertical: 20.0, horizontal: 12.0),

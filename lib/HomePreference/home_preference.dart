@@ -47,7 +47,11 @@ class _HomePreferenceState extends State<HomePreference> {
                     SelectCategory(),
                     SelectMaxCategory(),
                     AddressSubmit(),
-                    CustomBtn(),
+                    InkWell(
+                        onTap: (){
+                          Navigator.pushNamed(context, '/home');
+                        },
+                        child: CustomBtn()),
                     SizedBox(height: 35),
                   ],
                 ),

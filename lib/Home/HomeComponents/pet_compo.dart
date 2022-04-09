@@ -11,7 +11,7 @@ class PetCompo extends StatelessWidget {
   Widget build(BuildContext context) {
     return Container(
       width: MediaQuery.of(context).size.width,
-      margin: const EdgeInsets.symmetric(horizontal: 7,vertical: 15),
+      margin: const EdgeInsets.symmetric(horizontal: 7),
       child: Column(
         children: [
           Row(
@@ -20,7 +20,7 @@ class PetCompo extends StatelessWidget {
               Row(
                 children: [
                   Padding(
-                    padding: const EdgeInsets.symmetric(horizontal: 7),
+                    padding: const EdgeInsets.only(left: 7),
                     child: Text('Dogs',style: TextStyle(
                       fontSize: 20,
                       fontWeight: FontWeight.w400,
@@ -28,7 +28,7 @@ class PetCompo extends StatelessWidget {
                       color: Colors.black.withOpacity(0.6),
                     ),),
                   ),
-                  SvgPicture.asset('assets/icons/catedog.svg'),
+                  Image.asset('assets/icons/dog.png'),
                 ],
               ),
               InkWell(
@@ -52,13 +52,17 @@ class PetCompo extends StatelessWidget {
               shrinkWrap: true,
               gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
                 crossAxisCount: 2,
-                crossAxisSpacing: 14.0,
-                mainAxisSpacing: 8.0,
-                childAspectRatio: 4/3,
+                crossAxisSpacing: 2.0,
+                mainAxisSpacing: 2.0,
+                childAspectRatio: 5/3,
               ),
               itemCount: 4,
               itemBuilder: (context, index) {
-                return PetSuggestionCard();
+                return InkWell(
+                    onTap: (){
+                      Navigator.pushNamed(context, '/details');
+                    },
+                    child: PetSuggestionCard());
               },
             ),
           ),

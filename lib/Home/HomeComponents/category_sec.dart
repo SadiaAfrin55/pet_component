@@ -24,7 +24,7 @@ class CategorySection extends StatelessWidget {
                   color: Colors.black.withOpacity(0.6),
                 ),),
               ),
-              SvgPicture.asset('assets/icons/category.svg',width: 15,),
+              Image.asset('assets/icons/category.png',width: 15,),
             ],
           ),
           const SizedBox(height: 14),
@@ -33,8 +33,9 @@ class CategorySection extends StatelessWidget {
             shrinkWrap: true,
             gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
               crossAxisCount: 4,
-              crossAxisSpacing: 50.0,
-              mainAxisSpacing: 8.0,
+              crossAxisSpacing: 45.0,
+              mainAxisSpacing: 10.0,
+              childAspectRatio: 6/5,
             ),
             itemCount: 8,
             itemBuilder: (context, index) {
@@ -42,7 +43,9 @@ class CategorySection extends StatelessWidget {
             },
           ),
           InkWell(
-            onTap: (){},
+            onTap: (){
+              Navigator.pushNamed(context, '/seeCategory');
+            },
             child: Container(
               padding: const EdgeInsets.symmetric(vertical: 15),
               child: Center(
