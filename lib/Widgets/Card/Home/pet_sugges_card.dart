@@ -125,9 +125,15 @@ class _PetSuggestionCardState extends State<PetSuggestionCard> {
                                   ),
                                 ),
                               ),
-                              Padding(
-                                padding: const EdgeInsets.symmetric(horizontal: 3.0),
-                                child: Divider(thickness: 5,height: 10,color:Colors.red),
+                              // Padding(
+                              //   padding: const EdgeInsets.symmetric(horizontal: 3.0),
+                              //   child: Divider(thickness: 5,height: 10,color:Colors.red),
+                              // ),
+                              Container(
+                                margin: EdgeInsets.symmetric(horizontal: 3.0),
+                                width: 0.78,
+                                height: 10,
+                                color: Colors.black.withOpacity(0.2),
                               ),
                               const Text(
                                 "Age:",

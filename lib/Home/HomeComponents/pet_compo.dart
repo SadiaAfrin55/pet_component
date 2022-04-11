@@ -20,7 +20,7 @@ class PetCompo extends StatelessWidget {
               Row(
                 children: [
                   Padding(
-                    padding: const EdgeInsets.only(left: 7),
+                    padding: const EdgeInsets.only(left: 10),
                     child: Text('Dogs',style: TextStyle(
                       fontSize: 20,
                       fontWeight: FontWeight.w400,
@@ -34,7 +34,7 @@ class PetCompo extends StatelessWidget {
               InkWell(
                 onTap: (){},
                 child: Padding(
-                  padding: const EdgeInsets.symmetric(horizontal: 7.0),
+                  padding: const EdgeInsets.symmetric(horizontal: 22.0),
                   child: Text('See All',style: TextStyle(
                       fontSize: 10,
                       fontWeight: FontWeight.w300,
@@ -66,6 +66,7 @@ class PetCompo extends StatelessWidget {
               },
             ),
           ),
+
         ],
       ),
     );

@@ -10,11 +10,13 @@ class DetailsScreen extends StatelessWidget {
       appBar: AppBar(
         elevation: 0,
         backgroundColor: Colors.transparent,
-        title: Text('Details',style: TextStyle(fontSize: 16,fontWeight: FontWeight.w400),),
+        title: Text('Details',style: TextStyle(color:Colors.black,fontSize: 16,fontWeight: FontWeight.w400),),
         leading: Padding(
           padding: const EdgeInsets.symmetric(vertical: 10.0),
           child: IconButton(
-            onPressed: (){},
+            onPressed: (){
+              Navigator.pop(context);
+            },
             icon: Icon(Icons.arrow_back,color: Colors.black,),
           ),
         ),
